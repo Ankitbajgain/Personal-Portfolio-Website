@@ -49,6 +49,11 @@ nav .navbar .logo a{
   font-size: 35px;
   color: #4070f4;
 }
+nav .navbar .logo img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
 nav.sticky .navbar .logo a{
   color: #fff;
 }
@@ -77,7 +82,7 @@ nav.sticky .menu a:hover{
   color: #0E2431;
 }
 .navbar .media-icons a{
-  color: #4070f4;
+  color: #ffffff;
   font-size: 18px;
   margin: 0 6px;
 }
@@ -138,12 +143,12 @@ nav.sticky .menu-btn{
 .home .text-three{
   font-size: 40px;
   margin: 5px 0;
-  color: #4070f4;
+  color: #fcfcfc;
 }
 .home .text-four{
   font-size: 23px;
   margin: 5px 0;
-  color: #0E2431;
+  color: #000000;
 }
 .home .button{
   margin: 14px 0;
