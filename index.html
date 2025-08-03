@@ -1,208 +1,737 @@
 <!DOCTYPE html>
-<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8">
-    <title> Ankit Bajgain | Portfolio</title>
-    <link rel="icon" href="./images/logo.png" type="image/icon type">
+    <meta charset="UTF-8" />
+    <title>Ankit Bajgain | Portfolio</title>
+    <link rel="icon" href="./images/logo.png" type="image/icon type" />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- Fontawesome CDN Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
-<body>
-  <!-- Move to up button -->
-  <div class="scroll-button">
-    <a href="#home"><i class="fas fa-arrow-up"></i></a>
-  </div>
-  <!-- navgaition menu -->
-  <nav>
-    <div class="navbar">
-      <div class="logo"><a href="#"><img src="./images/logo.png"> </a></div>
-      <ul class="menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- EmailJS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <div class="loader">
+        <div class="elegant-spinner">
+          <div class="spinner-ring"></div>
+          <div class="spinner-ring"></div>
+          <div class="spinner-ring"></div>
+        </div>
+        <div class="loading-text">Loading...</div>
+      </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="custom-cursor">
+      <div class="cursor-dot"></div>
+      <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Move to up button -->
+    <div class="scroll-button">
+      <a href="#home"><i class="fas fa-arrow-up"></i></a>
+    </div>
+
+    <!-- navgaition menu -->
+    <nav>
+      <div class="navbar" data-aos="fade-down" data-aos-duration="1000">
+        <div class="logo">
+          <a href="#" class="logo-link">
+            <img
+              src="./images/logo.png"
+              alt="Logo"
+              class="logo-img"
+              data-aos="zoom-in"
+              data-aos-duration="800"
+              data-aos-delay="100"
+            />
+          </a>
+        </div>
+        <ul class="menu">
+          <li data-aos="fade-down" data-aos-delay="300" class="nav-item">
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+          <li data-aos="fade-down" data-aos-delay="400" class="nav-item">
+            <a href="#about" class="nav-link">About</a>
+          </li>
+          <li data-aos="fade-down" data-aos-delay="500" class="nav-item">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li data-aos="fade-down" data-aos-delay="600" class="nav-item">
+            <a href="#services" class="nav-link">Services</a>
+          </li>
+          <li data-aos="fade-down" data-aos-delay="700" class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
           <div class="cancel-btn">
             <i class="fas fa-times"></i>
           </div>
-      </ul>
-      <div class="media-icons">
-        <a href="https://www.facebook.com/ankit.bajgain/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com/AnkitBajgain" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/ankit.bajgain/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </ul>
+        <div class="media-icons">
+          <a
+            href="https://www.facebook.com/ankit.bajgain/"
+            target="_blank"
+            class="social-link social-hover"
+            data-aos="zoom-in"
+            data-aos-delay="800"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://twitter.com/AnkitBajgain"
+            target="_blank"
+            class="social-link social-hover"
+            data-aos="zoom-in"
+            data-aos-delay="900"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/ankit.bajgain/"
+            target="_blank"
+            class="social-link social-hover"
+            data-aos="zoom-in"
+            data-aos-delay="1000"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/ankit-bajgain/"
+            target="_blank"
+            class="social-link social-hover"
+            data-aos="zoom-in"
+            data-aos-delay="1100"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+        </div>
+      </div>
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+
+    <!-- Home Section Start -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <div
+          class="text"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
+          <div class="text-one" data-aos="fade-up" data-aos-delay="100">
+            Hello, I'm
+          </div>
+          <div class="text-two" data-aos="fade-up" data-aos-delay="300">
+            <span class="typewriter">Ankit Bajgain</span>
+          </div>
+          <div
+            class="text-three"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="500"
+          >
+            I'm a
+            <span class="profession-text"
+              >Project Manager & Software Engineer</span
+            >
+          </div>
+          <div
+            class="text-four"
+            data-aos="fade-up"
+            data-aos-duration="1200"
+            data-aos-delay="700"
+          >
+            Currently working as Project Manager for an OTT platform, managing
+            the complete technology stack and infrastructure. Specialized in
+            video streaming solutions from content ingestion to user delivery,
+            with strong expertise in full-stack development and media systems.
+          </div>
+        </div>
+        <div
+          class="button"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="900"
+        >
+          <a
+            href="https://www.linkedin.com/in/ankit-bajgain/"
+            target="_blank"
+            class="btn-primary"
+            data-aos="zoom-in"
+            data-aos-delay="1000"
+          >
+            <button class="cta-button">
+              <span>Connect With Me</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </a>
+          <a
+            href="#about"
+            class="btn-secondary"
+            data-aos="zoom-in"
+            data-aos-delay="1100"
+          >
+            <button class="secondary-button">
+              <span>Learn More</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="floating-shapes">
+        <div
+          class="shape shape-1"
+          data-aos="fade-up"
+          data-aos-delay="1200"
+        ></div>
+        <div
+          class="shape shape-2"
+          data-aos="fade-down"
+          data-aos-delay="1300"
+        ></div>
+        <div
+          class="shape shape-3"
+          data-aos="fade-left"
+          data-aos-delay="1400"
+        ></div>
+        <div
+          class="shape shape-4"
+          data-aos="fade-right"
+          data-aos-delay="1500"
+        ></div>
+      </div>
+    </section>
+
+    <!-- About Section Start -->
+    <section class="about" id="about">
+      <div class="content">
+        <div class="title" data-aos="zoom-in" data-aos-duration="1000">
+          <span>About Me</span>
+        </div>
+        <div class="about-details">
+          <div
+            class="left"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <div class="image-container">
+              <img
+                src="images/about.jpg"
+                alt="Ankit Bajgain"
+                class="about-img"
+              />
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="fas fa-code"></i>
+                  <span>Passionate Developer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="right"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
+            <div class="topic">
+              Project Manager & Software Engineer at Nepal's Leading OTT
+              Platform
+            </div>
+            <p>
+              I am a software engineer graduated from Kathmandu Engineering
+              College (TU) with a specialization in Computer Engineering.
+              Currently working as a Project Manager at one of Nepal's top OTT
+              platforms, where I oversee video streaming projects and manage the
+              complete video delivery pipeline from source to users. With over 3
+              years of professional experience, I have comprehensive knowledge
+              of video streaming technologies including FFmpeg, AWS Media
+              Services, CDN optimization, and DRM implementation. I also
+              maintain strong technical skills in Django backend development and
+              React/Flutter frontend technologies.
+            </p>
+
+            <div class="info-cards">
+              <div class="info-card" data-aos="flip-left" data-aos-delay="100">
+                <i class="fas fa-graduation-cap"></i>
+                <div class="info-content">
+                  <h4>Education</h4>
+                  <span>Kathmandu Engineering College</span>
+                </div>
+              </div>
+              <div class="info-card" data-aos="flip-right" data-aos-delay="200">
+                <i class="fas fa-briefcase"></i>
+                <div class="info-content">
+                  <h4>Current Role</h4>
+                  <span>Project Manager </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="button">
+              <a
+                href="./PDF/AnkitCV.pdf"
+                target="_blank"
+                class="download-cv"
+                data-aos="bounce-in"
+                data-aos-delay="300"
+              >
+                <button class="cv-button">
+                  <i class="fas fa-download"></i>
+                  <span>Download CV</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Skill Section Start -->
+    <section class="skills" id="skills">
+      <div class="content">
+        <div class="title" data-aos="zoom-in" data-aos-duration="1000">
+          <span>My Skills</span>
+        </div>
+
+        <!-- Unified Grid -->
+        <div class="boxes">
+          <!-- Text & Experience as Grid Item -->
+          <div
+            class="text-section"
+            data-aos="fade-right"
+            data-aos-duration="1200"
+          >
+            <div class="topic">Professional Skills & Expertise</div>
+            <p>
+              With over 3 years of professional experience in software
+              development, I specialize in full-stack development using Django
+              for robust backend systems and modern frontend frameworks
+              including React, React Native, and Flutter. I have successfully
+              delivered multiple projects across web and mobile platforms,
+              focusing on scalable architecture and optimal user experience.
+            </p>
+            <div class="experience">
+              <div class="exp-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="num counter" data-target="3">3</div>
+                <div class="exp">
+                  Years Of <br />
+                  Professional Experience
+                </div>
+              </div>
+              <div class="exp-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="num counter" data-target="25">25</div>
+                <div class="exp">
+                  Projects <br />
+                  Completed
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills Cards -->
+          <div class="box" data-aos="flip-up" data-aos-delay="100">
+            <div class="icon"><i class="fas fa-code"></i></div>
+            <div class="topic">Programming Languages</div>
+            <p>
+              Python, JavaScript - Expert in backend development and frontend
+              frameworks
+            </p>
+          </div>
+
+          <div class="box" data-aos="flip-up" data-aos-delay="200">
+            <div class="icon"><i class="fas fa-sitemap"></i></div>
+            <div class="topic">Data Structures & Algorithms</div>
+            <p>
+              Arrays, Trees, Graphs, Sorting, Searching - Strong foundation in
+              problem solving
+            </p>
+          </div>
+
+          <div class="box" data-aos="flip-up" data-aos-delay="300">
+            <div class="icon"><i class="fas fa-database"></i></div>
+            <div class="topic">Databases & SQL</div>
+            <p>
+              MySQL, PostgreSQL, MongoDB, Redis - Database design and
+              optimization expertise
+            </p>
+          </div>
+
+          <div class="box" data-aos="flip-up" data-aos-delay="400">
+            <div class="icon"><i class="fab fa-git-alt"></i></div>
+            <div class="topic">Version Control (Git)</div>
+            <p>
+              Git, GitHub, GitLab - Branching strategies & workflow management
+            </p>
+          </div>
+
+          <div class="box" data-aos="flip-up" data-aos-delay="500">
+            <div class="icon"><i class="fas fa-cube"></i></div>
+            <div class="topic">Object-Oriented Programming</div>
+            <p>
+              Encapsulation, Inheritance, Polymorphism - SOLID principles &
+              patterns
+            </p>
+          </div>
+
+          <div class="box" data-aos="flip-up" data-aos-delay="600">
+            <div class="icon"><i class="fas fa-calendar-alt"></i></div>
+            <div class="topic">Project Planning & Scheduling</div>
+            <p>
+              Timeline, Milestone tracking, Resource allocation - Strategic
+              planning
+            </p>
+          </div>
+
+          <div class="box" data-aos="flip-up" data-aos-delay="700">
+            <div class="icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="topic">Risk Management</div>
+            <p>
+              Risk assessment, Mitigation strategies - Proactive risk handling
+            </p>
+          </div>
+
+          <div class="box" data-aos="flip-up" data-aos-delay="800">
+            <div class="icon"><i class="fas fa-chart-line"></i></div>
+            <div class="topic">Budget & Resource Management</div>
+            <p>
+              Cost control, Resource optimization - Efficient project economics
+            </p>
+          </div>
+
+          <div class="box" data-aos="flip-up" data-aos-delay="900">
+            <div class="icon"><i class="fas fa-film"></i></div>
+            <div class="topic">Video Processing & FFmpeg</div>
+            <p>
+              Video encoding, Transcoding, Streaming protocols - Media
+              processing
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Services Section Start -->
+    <section class="services" id="services">
+      <div class="content">
+        <div class="title" data-aos="zoom-in" data-aos-duration="1000">
+          <span>My Services</span>
+        </div>
+        <div class="boxes">
+          <div
+            class="box service-card"
+            data-aos="fade-up-right"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
+            <div class="icon">
+              <i class="fas fa-drafting-compass"></i>
+            </div>
+            <div class="topic">System Design & Development</div>
+            <p>
+              Architecting scalable software systems from ground up, including
+              database design, API architecture, microservices implementation,
+              and full-stack development solutions tailored to your business
+              needs.
+            </p>
+          </div>
+
+          <div
+            class="box service-card"
+            data-aos="fade-up-left"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <div class="icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="topic">Mobile App Development</div>
+            <p>
+              Creating cross-platform mobile applications using React Native and
+              native technologies, with focus on user experience, performance
+              optimization, and seamless integration with backend services.
+            </p>
+          </div>
+
+          <div
+            class="box service-card"
+            data-aos="fade-up-right"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+          >
+            <div class="icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <div class="topic">Website / Web App Development</div>
+            <p>
+              Building modern, responsive websites and web applications using
+              latest frameworks like React, Django, and Node.js. From simple
+              landing pages to complex web applications with advanced
+              functionality.
+            </p>
+          </div>
+
+          <div
+            class="box service-card"
+            data-aos="fade-up-left"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
+            <div class="icon">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <div class="topic">Cloud Solutions</div>
+            <p>
+              Implementing robust cloud infrastructure using AWS, Azure, and
+              GCP. Services include cloud migration, serverless architecture,
+              containerization, auto-scaling, and cost optimization strategies.
+            </p>
+          </div>
+
+          <div
+            class="box service-card"
+            data-aos="fade-up-right"
+            data-aos-duration="1000"
+            data-aos-delay="500"
+          >
+            <div class="icon">
+              <i class="fas fa-video"></i>
+            </div>
+            <div class="topic">OTT Development Services</div>
+            <p>
+              Specialized in video streaming platform development with expertise
+              in FFmpeg processing, AWS Media Services, CDN optimization, DRM
+              implementation, and complete OTT solution architecture.
+            </p>
+          </div>
+
+          <div
+            class="box service-card"
+            data-aos="fade-up-left"
+            data-aos-duration="1000"
+            data-aos-delay="600"
+          >
+            <div class="icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div class="topic">Technology Consulting</div>
+            <p>
+              Providing strategic technology consulting for startups and
+              enterprises. Services include technology stack selection,
+              architecture review, performance optimization, and digital
+              transformation strategies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Me section Start -->
+    <section class="contact" id="contact">
+      <div class="content">
+        <div class="title" data-aos="zoom-in" data-aos-duration="1000">
+          <span>Get In Touch</span>
+        </div>
+        <div
+          class="contact-content"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
+          <div class="text">
+            <div class="topic">Let's Work Together</div>
+            <p>
+              I'm always interested in new opportunities and exciting projects.
+              Whether you have a question, want to collaborate, or just want to
+              say hello, I'd love to hear from you!
+            </p>
+
+            <div class="contact-info">
+              <div
+                class="contact-item"
+                data-aos="slide-right"
+                data-aos-delay="100"
+              >
+                <i class="fas fa-envelope"></i>
+                <div class="contact-details">
+                  <span class="label">Email</span>
+                  <span class="value">bajgainankit@gmail.com</span>
+                </div>
+              </div>
+              <div
+                class="contact-item"
+                data-aos="slide-left"
+                data-aos-delay="200"
+              >
+                <i class="fas fa-phone"></i>
+                <div class="contact-details">
+                  <span class="label">Phone</span>
+                  <span class="value">+977 9862133032</span>
+                </div>
+              </div>
+              <div
+                class="contact-item"
+                data-aos="slide-right"
+                data-aos-delay="300"
+              >
+                <i class="fab fa-linkedin"></i>
+                <div class="contact-details">
+                  <span class="label">LinkedIn</span>
+                  <span class="value">
+                    <a
+                      href="https://www.linkedin.com/in/ankit-bajgain/"
+                      target="_blank"
+                      style="color: inherit; text-decoration: none"
+                    >
+                      linkedin.com/in/ankit-bajgain
+                    </a>
+                  </span>
+                </div>
+              </div>
+              <div
+                class="contact-item"
+                data-aos="slide-left"
+                data-aos-delay="400"
+              >
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="contact-details">
+                  <span class="label">Location</span>
+                  <span class="value">Kathmandu, Nepal</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="button">
+              <button
+                class="contact-button"
+                onclick="openContactModal()"
+                data-aos="bounce-in"
+                data-aos-delay="500"
+              >
+                <i class="fas fa-paper-plane"></i>
+                <span>Send Message</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Modal -->
+    <div class="modal-overlay" id="contactModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Send Me a Message</h3>
+          <button class="close-modal" onclick="closeContactModal()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" placeholder="Subject" required />
+            <i class="fas fa-tag"></i>
+          </div>
+          <div class="form-group">
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="5"
+              required
+            ></textarea>
+            <i class="fas fa-comment"></i>
+          </div>
+          <button type="submit" class="submit-btn">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
       </div>
     </div>
-    <div class="menu-btn">
-      <i class="fas fa-bars"></i>
-    </div>
-  </nav>
 
-<!-- Home Section Start -->
- <section class="home" id="home">
-   <div class="home-content">
-     <div class="text">
-       <div class="text-one">Hello,</div>
-       <div class="text-two">I'm Ankit Bajgain</div>
-       <div class="text-three">Engineer</div>
-      
-     </div>
-     <div class="button">
-      <a href="https://www.linkedin.com/in/ankit-bajgain/" target="_blank">
-       <button>Learn More</button></a>
-     </div>
-   </div>
- </section>
-
-<!-- About Section Start -->
-<section class="about" id="about">
-  <div class="content">
-    <div class="title"><span>About Me</span></div>
-  <div class="about-details">
-    <div class="left">
-      <img src="images/about.jpg" alt="">
-    </div>
-    <div class="right">
-      <div class="topic">Passionate Engineer</div>
-      <p>I am an engineering graduate specialized in Computer Engineering. I graduated from Kathmandu Engineering College (TU).
-        I have a good understanding of C programming, C++, Python, and DevOps that I have learned on Udemy. Along with these technical skills, I have good communication skills that I feel are necessary for interaction with clients.
-
-      </p>
-      <div class="button">
-        <a href="./PDF/AnkitCV.pdf" target="_blank">
-
-        <button>Download CV </button>
-        </a>
-
+    <!-- Footer Section Start -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-text" data-aos="fade-up" data-aos-duration="1000">
+          <div class="footer-logo">
+            <span>Ankit Bajgain</span>
+          </div>
+          <p>Crafting digital experiences with passion and precision</p>
+          <div class="footer-social">
+            <a
+              href="https://www.facebook.com/ankit.bajgain/"
+              target="_blank"
+              class="footer-social-link"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://twitter.com/AnkitBajgain"
+              target="_blank"
+              class="footer-social-link"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/ankit.bajgain/"
+              target="_blank"
+              class="footer-social-link"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ankit-bajgain/"
+              target="_blank"
+              class="footer-social-link"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>© 2025 Ankit Bajgain. All rights reserved.</span>
+        </div>
       </div>
-    </div>
-  </div>
-  </div>
-</section>
+    </footer>
 
-<!-- My Skill Section Start -->
-<!-- Section Tag and Other Div will same where we need to put same CSS -->
-<section class="skills" id="skills">
- <div class="content">
-   <div class="title"><span>My Skills</span></div>
-   <div class="skills-details">
-     <div class="text">
-       <div class="topic">Skills and Experience</div>
-       <p>As a individual just graduated from college, I have work on the various college projects in college and use various tools. 
-        Different languages are used on the projects such as Python, C, C++, JAVA, etc. But I havenot work for any company.
-         </p>
-       <div class="experience">
-         <div class="num">0</div>
-         <div class="exp">Years Of <br> Professional Experience</div>
-       </div>
-     </div>
-     <div class="boxes">
-       <div class="box">
-         <div class="topic">HTML</div>
-         <div class="per">40%</div>
-       </div>
-       <div class="box">
-         <div class="topic">CSS</div>
-         <div class="per">40%</div>
-       </div>
-       <div class="box">
-         <div class="topic">Python</div>
-         <div class="per">30%</div>
-       </div>
-       <div class="box">
-         <div class="topic">DevOPs</div>
-         <div class="per">20%</div>
-       </div>
-     </div>
-   </div>
- </div>
-</section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-KP8XDD8DE9"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-<!-- My Services Section Start -->
- <section class="services" id="services">
-   <div class="content">
-     <div class="title"><span>My Services</span></div>
-     <div class="boxes">
-       <div class="box">
-         <div class="icon">
-           <i class="fas fa-desktop"></i>
-       </div>
-       <div class="topic">Web Devlopment</div>
-       <p></p>
-     </div>
-       <div class="box">
-         <div class="icon">
-           <i class="fas fa-paint-brush"></i>
-       </div>
-       <div class="topic">Graphic Design</div>
-       <p></p>
-     </div>
-       <div class="box">
-         <div class="icon">
-           <i class="fas fa-chart-line"></i>
-       </div>
-       <div class="topic">Digital Marketing</div>
-       <p></p>
-     </div>
-       <div class="box">
-         <div class="icon">
-           <i class="fab fa-android"></i>
-       </div>
-       <div class="topic">Icon Design</div>
-       <p></p>
-     </div>
-       <div class="box">
-         <div class="icon">
-           <i class="fas fa-camera-retro"></i>
-       </div>
-       <div class="topic">Photography</div>
-       <p></p>
-     </div>
-       <div class="box">
-         <div class="icon">
-           <i class="fas fa-tablet-alt"></i>
-       </div>
-       <div class="topic">Apps Devlopment</div>
-       <p></p>
-     </div>
-   </div>
-   </div>
- </section>
-
-<!-- Contact Me section Start -->
-<section class="contact" id="contact">
-  <div class="content">
-    <div class="title"><span>Contact Me</span></div>
-    <div class="text">
-      <div class="topic">Have Any Project?</div>
-      <p></p>
-      <div class="button">
-        <button>Let's Chat</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer Section Start -->
-<footer>
-  <div class="text">
-    <span>Created By <a href="#">Ankit Bajgain</a> | &#169; 2022 All Rights Reserved</span>
-  </div>
-</footer>
-
-  <script src="script.js"></script>
-</body>
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KP8XDD8DE9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KP8XDD8DE9');
-</script>
-
+    gtag("config", "G-KP8XDD8DE9");
+  </script>
 </html>
