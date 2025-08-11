@@ -197,6 +197,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  font-size: 16px; /* Base font size for rem calculations */
 }
 
 body {
@@ -204,9 +205,28 @@ body {
   line-height: 1.6;
   color: var(--text-dark);
   overflow-x: hidden;
+  min-width: 320px; /* Minimum width to prevent breaking */
   /* Optimize for animations */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure responsiveness basics */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent horizontal scrolling */
+.container, .content, .cv-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Mobile-first approach for text */
+h1, h2, h3, h4, h5, h6, p, span, div {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Performance optimizations */
