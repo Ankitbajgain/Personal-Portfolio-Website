@@ -2322,7 +2322,7 @@ footer {
   }
 }
 
-/* Responsive Design */
+/* Responsive Design - Enhanced */
 @media (max-width: 1200px) {
   .content {
     width: 95%;
@@ -2331,6 +2331,26 @@ footer {
   .about-details,
   .skills-details {
     gap: 3rem;
+  }
+  
+  /* Home section adjustments */
+  .text-two {
+    font-size: 3.5rem;
+  }
+  
+  .text-three {
+    font-size: 1.8rem;
+  }
+  
+  /* Skills grid optimization */
+  .skills .boxes {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .skills .text-section {
+    grid-column: 1 / 4;
+    grid-row: 1;
   }
 }
 
@@ -2359,12 +2379,87 @@ footer {
   
   /* Skills Section Tablet - Optimized */
   .skills .boxes {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.3rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
   }
   
-  .skill-item {
-    min-height: 270px;
+  .skills .text-section {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+  
+  .skills .box:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .skills .box:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  
+  .skills .box:nth-child(4) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  
+  .skills .box:nth-child(5) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+  
+  .skills .box:nth-child(6) {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  
+  .skills .box:nth-child(7) {
+    grid-column: 2;
+    grid-row: 4;
+  }
+  
+  .skills .box:nth-child(8) {
+    grid-column: 1;
+    grid-row: 5;
+  }
+  
+  .skills .box:nth-child(9) {
+    grid-column: 2;
+    grid-row: 5;
+  }
+  
+  /* Home section tablet */
+  .text-two {
+    font-size: 3.2rem;
+  }
+  
+  .text-three {
+    font-size: 1.6rem;
+  }
+  
+  .text-four {
+    font-size: 1.1rem;
+    max-width: 500px;
+  }
+  
+  /* Navigation tablet */
+  nav .navbar {
+    padding: 15px 20px;
+  }
+  
+  .logo-img {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+  
+  .social-link {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -2374,7 +2469,7 @@ footer {
     position: fixed;
     left: -100%;
     top: 0;
-    background: #fffffffa;
+    background: rgba(255, 255, 255, 0.98);
     height: 100vh;
     width: 100%;
     max-width: 400px;
@@ -2494,17 +2589,30 @@ footer {
     border: 1px solid rgba(94, 141, 131, 0.3);
   }
   
+  /* Section padding mobile */
+  section {
+    padding: 80px 0;
+  }
+  
   /* Home Section Mobile */
+  .text-one {
+    font-size: 1.2rem;
+  }
+  
   .text-two {
-    font-size: 3rem;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
   }
   
   .text-three {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
   }
   
   .text-four {
     font-size: 1rem;
+    max-width: 100%;
+    margin: 0 auto 1.5rem;
   }
   
   .home .button {
@@ -2515,124 +2623,621 @@ footer {
   
   .cta-button,
   .secondary-button {
-    width: 250px;
+    width: 100%;
+    max-width: 280px;
     justify-content: center;
+    padding: 14px 25px;
+    font-size: 1rem;
   }
   
   /* About Section Mobile */
+  .about-details {
+    gap: 2rem;
+  }
+  
   .image-container {
-    max-width: 300px;
+    max-width: 350px;
     margin: 0 auto;
   }
   
   .about-img {
-    height: 300px;
+    height: 350px;
+  }
+  
+  .about .topic {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  .about .right p {
+    font-size: 1rem;
+    text-align: left;
+  }
+  
+  .info-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .info-card {
+    padding: 1.2rem;
   }
   
   /* Skills Section Mobile - Optimized Grid */
-  .boxes {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.2rem;
+  .skills .boxes {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, auto);
   }
   
-  .skill-item {
-    padding: 1.8rem 1.2rem;
-    min-height: 260px;
+  .skills .text-section {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 2rem 1.5rem;
   }
   
-  .skill-icon {
-    font-size: 3rem;
+  .skills .box {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    padding: 1.8rem 1.5rem;
+    min-height: auto;
+  }
+  
+  .skills .text-section .topic {
+    font-size: 1.4rem;
+    text-align: center;
     margin-bottom: 1rem;
   }
   
-  .skill-item .topic {
-    font-size: 1.2rem;
-    margin-bottom: 0.7rem;
+  .skills .text-section p {
+    font-size: 0.95rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
   }
   
-  .skill-description {
-    font-size: 0.85rem;
-    margin-bottom: 1rem;
-  }
-  
-  .skill-level {
-    font-size: 0.85rem;
-    padding: 5px 12px;
-    margin-bottom: 0.7rem;
-  }
-  
-  .skill-tag {
-    font-size: 0.7rem;
-    padding: 2px 6px;
-  }
-  
-  .experience {
+  .skills .text-section .experience {
     flex-direction: column;
     gap: 1rem;
+    align-items: center;
+  }
+  
+  .skills .text-section .exp-card {
+    max-width: none;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .skills .icon {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .skills .topic {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .skills .box p {
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
   
   /* Services Section Mobile */
   .services .boxes {
     grid-template-columns: 1fr;
-  }
-  
-  /* Contact Section Mobile */
-  .contact-info {
-    grid-template-columns: 1fr;
-  }
-  
-  .modal-content {
-    padding: 2rem;
-    margin: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .title span {
-    font-size: 2rem;
-  }
-  
-  .text-two {
-    font-size: 2.5rem;
-  }
-  
-  .about .topic,
-  .skills .text .topic,
-  .contact .topic {
-    font-size: 1.5rem;
-  }
-  
-  .skill-item {
-    padding: 1.5rem;
+    gap: 1.5rem;
   }
   
   .service-card {
     padding: 2rem 1.5rem;
   }
   
+  .service-card .icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .service-card .icon i {
+    font-size: 1.8rem;
+  }
+  
+  .service-card .topic {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .service-card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Contact Section Mobile */
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
   .contact-item {
     padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+  }
+  
+  .contact-item i {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  
+  .contact .topic {
+    font-size: 1.8rem;
+  }
+  
+  .contact .text p {
+    font-size: 1rem;
+  }
+  
+  .contact-button {
+    font-size: 1.1rem;
+    padding: 16px 35px;
+  }
+  
+  /* Modal Mobile */
+  .modal-content {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+    width: calc(100% - 2rem);
+  }
+  
+  .modal-header h3 {
+    font-size: 1.5rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 12px 45px 12px 12px;
+    font-size: 0.95rem;
+  }
+  
+  .submit-btn {
+    padding: 14px 25px;
+    font-size: 1rem;
+  }
+  
+  /* Footer Mobile */
+  .footer-logo {
+    font-size: 1.8rem;
+  }
+  
+  .footer-text p {
+    font-size: 1rem;
   }
   
   .footer-social {
-    gap: 0.5rem;
+    gap: 1rem;
   }
   
   .footer-social-link {
     width: 45px;
     height: 45px;
+    font-size: 1.1rem;
   }
 }
 
-/* Animation Utilities - Optimized */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+@media (max-width: 480px) {
+  /* Extra small mobile optimization */
+  .content {
+    width: 95%;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  
+  section {
+    padding: 60px 0;
+  }
+  
+  .title span {
+    font-size: 2rem;
+  }
+  
+  /* Home section extra small */
+  .text-one {
+    font-size: 1rem;
+  }
+  
+  .text-two {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+  
+  .text-three {
+    font-size: 1.2rem;
+  }
+  
+  .text-four {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .cta-button,
+  .secondary-button {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+  
+  /* Navigation extra small */
+  nav .navbar {
+    padding: 12px 15px;
+  }
+  
+  .logo-img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .menu-btn,
+  .cancel-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    right: 15px;
+  }
+  
+  .nav-link {
+    width: 280px;
+    padding: 15px 35px;
+    font-size: 1rem;
+  }
+  
+  /* About section extra small */
+  .about .topic {
+    font-size: 1.5rem;
+  }
+  
+  .about .right p {
+    font-size: 0.95rem;
+  }
+  
+  .image-container {
+    max-width: 280px;
+  }
+  
+  .about-img {
+    height: 280px;
+  }
+  
+  .info-card {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+  }
+  
+  .info-card i {
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+  }
+  
+  /* Skills section extra small */
+  .skills .text-section {
+    padding: 1.5rem;
+  }
+  
+  .skills .text-section .topic {
+    font-size: 1.2rem;
+  }
+  
+  .skills .text-section p {
+    font-size: 0.9rem;
+  }
+  
+  .skills .box {
+    padding: 1.5rem;
+  }
+  
+  .skills .icon {
+    font-size: 2rem;
+  }
+  
+  .skills .topic {
+    font-size: 1rem;
+  }
+  
+  .skills .box p {
+    font-size: 0.85rem;
+  }
+  
+  /* Services section extra small */
+  .service-card {
+    padding: 1.5rem;
+  }
+  
+  .service-card .icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .service-card .icon i {
+    font-size: 1.5rem;
+  }
+  
+  .service-card .topic {
+    font-size: 1.2rem;
+  }
+  
+  .service-card p {
+    font-size: 0.9rem;
+  }
+  
+  /* Contact section extra small */
+  .contact .topic {
+    font-size: 1.5rem;
+  }
+  
+  .contact .text p {
+    font-size: 0.95rem;
+  }
+  
+  .contact-item {
+    padding: 1.2rem;
+  }
+  
+  .contact-button {
+    font-size: 1rem;
+    padding: 14px 30px;
+  }
+  
+  /* Modal extra small */
+  .modal-content {
+    padding: 1.5rem;
+  }
+  
+  .modal-header h3 {
+    font-size: 1.3rem;
+  }
+  
+  /* Footer extra small */
+  .footer-logo {
+    font-size: 1.5rem;
+  }
+  
+  .footer-text p {
+    font-size: 0.9rem;
+  }
+  
+  .footer-social {
+    gap: 0.8rem;
+  }
+  
+  .footer-social-link {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  /* Scroll button extra small */
+  .scroll-button a {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Additional responsive improvements for landscape and edge cases */
+
+/* Landscape mobile orientation */
+@media (max-width: 992px) and (orientation: landscape) {
+  .home {
+    height: auto;
+    min-height: 100vh;
+    padding: 120px 0 80px;
+  }
+  
+  .text-two {
+    font-size: 2.8rem;
+  }
+  
+  .text-three {
+    font-size: 1.3rem;
+  }
+  
+  .text-four {
+    font-size: 0.95rem;
+    margin: 0 auto 1.5rem;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+}
+
+/* Small tablets in portrait */
+@media (min-width: 481px) and (max-width: 768px) {
+  .home .button {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .cta-button,
+  .secondary-button {
+    width: auto;
+    min-width: 200px;
+  }
+  
+  .contact-item {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .skills .text-section .experience {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1600px) {
+  .content {
+    max-width: 1400px;
+  }
+  
+  .text-two {
+    font-size: 4.5rem;
+  }
+  
+  .text-three {
+    font-size: 2.2rem;
+  }
+  
+  .text-four {
+    font-size: 1.3rem;
+    max-width: 700px;
+  }
+  
+  .skills .boxes {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+  
+  .skills .text-section {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+}
+
+/* Fix for very small screens (320px and below) */
+@media (max-width: 320px) {
+  .content {
+    width: 98%;
+  }
+  
+  .text-two {
+    font-size: 2rem;
+  }
+  
+  .nav-link {
+    width: 250px;
+    padding: 12px 25px;
+  }
+  
+  .cta-button,
+  .secondary-button {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .modal-content {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+  
+  .service-card {
+    padding: 1.2rem;
+  }
+  
+  .contact-item {
+    padding: 1rem;
+  }
+}
+
+/* High density screens improvements */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .logo-img,
+  .about-img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Accessibility improvements for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .floating-shapes {
+    animation: none;
+  }
+  
+  .skills .box:hover,
+  .service-card:hover,
+  .contact-item:hover {
+    transform: none;
+  }
+  
+  .nav-link:hover,
+  .social-link:hover {
+    transform: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  nav,
+  .scroll-button,
+  .floating-shapes,
+  .modal-overlay {
+    display: none !important;
+  }
+  
+  .home {
+    background: white;
+    color: black;
+  }
+  
+  .home::before {
+    display: none;
+  }
+  
+  section {
+    page-break-inside: avoid;
+    padding: 20px 0;
+  }
+  
+  .content {
+    width: 100%;
+  }
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+  .floating-shapes {
+    display: none;
+  }
+  
+  .home {
+    background-attachment: scroll;
+  }
+  
+  /* Reduce animations on mobile for better performance */
+  *, *::before, *::after {
+    animation-duration: 0.3s !important;
+    transition-duration: 0.2s !important;
+  }
+}
+
+/* Tablet specific optimizations */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .skills .boxes {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.8rem;
+  }
+  
+  .skills .text-section {
+    grid-column: 1 / 3;
+  }
+  
+  .services .boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .contact-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Fix for iOS Safari viewport height issues */
+@supports (-webkit-touch-callout: none) {
+  .home {
+    min-height: -webkit-fill-available;
   }
 }
 
